@@ -40,10 +40,12 @@ def whoWins(playerPoints, cpuPoints, numOfGames):
         print('player wins the game!\n')
         playerScore = 0
         cpuScore = 0
-        getAnswer = str(input('Do you want to play again? (yes/no)\n')).lower
+        getAnswer = input('Do you want to play again? (yes/no)\n').lower()
         if getAnswer == 'yes':
+            print('')
             howManyGames()
         else:
+            print('\nHave a good day!')
             sys.exit()
     elif cpu == countGames:
         print('cpu wins the game!\n')
@@ -51,8 +53,10 @@ def whoWins(playerPoints, cpuPoints, numOfGames):
         cpuScore = 0
         getAnswer = str(input('Do you want to play again? (yes/no)\n')).lower()
         if getAnswer == 'yes':
+            print('')
             howManyGames()
         else:
+            print('\nHave a good day!')
             sys.exit()
     else:
         print('the game continues...\n')
@@ -68,7 +72,7 @@ def letsPlayAGame(ply, numOfGames):
     print('')
     if(player == 'rock' and cpu == 'scissors' or player == 'scissors' and cpu == 'paper' or player == 'paper' and cpu == 'rock' ):
         playerScore += 1
-        print(f'Player chooses: {player}\nCPU chooses: {cpu}\n')
+        print(f'Player chooses: {player} \nCPU chooses: {cpu}\n')
         # print('')
         print('Player wins')
 
@@ -89,6 +93,7 @@ def letsPlayAGame(ply, numOfGames):
 
 def howManyGames():
     try:
+        print('')
         numberOfGames = int(input('How many games do you want to play up to?\n'))
         print('')
         print(f'Okay great! {numberOfGames} it is!')
